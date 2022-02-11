@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#008080</color>
+    <color name="purple_700">#006666</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lighter">#006080</color>
+    <color name="darkfirozi">#009999</color>
+
+    <color name="colorPrimary1">#6200EE</color>
+    <color name="colorPrimaryDark1">#3700B3</color>
+    <color name="coloryellowdark">#4d2e00</color>
+    <color name="coloryellowdark1">#804d00</color>
+    <color name="coloryellowdark10">#805500</color>
+    <color name="coloryellowdark2">#b36b00</color>
+    <color name="TextSubHeadingColor">#FFEA27</color>
+    <color name="dropDownColor1">#FFFCB7</color>
+
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="firozi">#03DAC5</color>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorAccent">#4fa881</color>
+    <color name="colorIndivateTab">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorCardView">#f7f7f7</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_500">#a4a4a4</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_800">#212121</color>
+    <color name="colorMagenda">#ffBE80FF</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorBlue">#0000FF</color>
+    <color name="colorFUCHSIA">#FF00FF</color>
+    <color name="TextColor1">#0E3E6D</color>
+    <color name="colorPURPLE">#800080</color>
+    <color name="colorYELLOW">#FFF78E</color>
+    <color name="color_slider">#31a05f</color>
+    <color name="color_headernew">#0b6e4f</color>
+    <color name="color_slider1">#1D83DD</color>
+    <color name="color_headernew1">#224281</color>
+
+    <color name="SubHeadingColor">#e1c7b5</color>
+    <color name="TextHintColor">#b89074</color>
+    <color name="TextColor">#8d542e</color>
+
+    <color name="SilverColor">#C0C0C0</color>
+    <color name="BlackColor">#000000</color>
+    <color name="OliveColor">#808000</color>
+    <color name="RedColor">#FF0000</color>
+    <color name="LimeColor">#00FF00</color>
+    <color name="GreenColor">#008000</color>
+    <color name="AquaColor">#00FFFF</color>
+    <color name="TealColor">#008080</color>
+    <color name="BlueColor">#0000FF</color>
+    <color name="GrayLightColor">#4d8ab0</color>
+
+
+    <color name="childcell_color">#F0F0F0</color>
+    <color name="red_color">#FF5D5D</color>
+    <color name="black_color">#000000</color>
+    <color name="green_color">#5DFF65</color>
+    <color name="blue_color">#5D65FF</color>
+    <color name="whit_color">#00000000</color>
+    <color name="color_medical">#50c6f2</color>
+    <color name="color_diet">#b6ade5</color>
+    <color name="color_dos">#94c975</color>
+    <color name="color_donts">#fb8b8c</color>
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_darkgreen">#105C06</color>
+    <color name="color_today">#FFFFFF</color>
+
+    <color name="yellow_color_imu">#d2b14e</color>
+    <color name="green_color_imu">#8cbf4b</color>
+    <color name="blue_color_imu">#71a7d8</color>
+    <color name="pink_color_imu">#c8a0b8</color>
+    <color name="red_color_imu">#F20C0C</color>
+    <color name="TRANSPARENT">#00000000</color>
+
+    <color name="header1">#5489b6</color>
+    <color name="header2">#a6882e</color>
+    <color name="header3">#a79d3e</color>
+    <color name="header4">#b07f39</color>
+    <color name="header5">#d78a5e</color>
+    <color name="header6">#b87d84</color>
+
+    <color name="bg1">#76abd7</color>
+    <color name="bg2">#d2b14e</color>
+    <color name="bg3">#c6bb50</color>
+    <color name="bg4">#d8ab62</color>
+    <color name="bg5">#f2b985</color>
+    <color name="bg6">#de9da6</color>
+
+    <color name="startColor">#a1bace</color>
+    <color name="centreColor">#abbcca</color>
+    <color name="centreColorShadow">#87a2a2a2</color>
+
+
+
+
+</resources>

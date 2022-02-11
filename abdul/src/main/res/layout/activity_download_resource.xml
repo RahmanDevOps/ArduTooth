@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="MainBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="zmq.com.ystlibrary.utility.TestDialog" />
+
+        <variable
+            name="data"
+            type="zmq.com.ystlibrary.model.StoryListJson.Data" />
+    </data>
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/menu_header">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_body"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/header"
+            tools:context=".canvas.DownloadResourceActivity">
+
+            <FrameLayout
+                android:id="@+id/frame_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/frame_footer"
+                android:background="@drawable/yst_background">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/stories_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </FrameLayout>
+
+            <!--<RelativeLayout
+                progressBar Layout
+            </RelativeLayout>-->
+            <FrameLayout
+                android:id="@+id/frame_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/menu_bottom">
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/frame_download_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/yst_background"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relative_download_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_marginTop="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txt_storyname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:text="Story Name" />
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txt_story_english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_storyname"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#e4d279"
+                    android:text="@{data.english_name}" />
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/txt_select_lng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_story_english"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:text="Select Language" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/recycler_lang"
+                    android:layout_below="@+id/txt_select_lng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/txt_author"
+                    android:layout_below="@+id/recycler_lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:text="Author" />
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txt_author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_author"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#e4d279"
+                    android:text="@{data.author_name}"/>
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/txt_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_author_name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:text="Views" />
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/txt_view_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_views"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#e4d279"
+                    android:text="@{data.view}" />
+
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:id="@+id/btn_play"
+                    android:layout_below="@+id/txt_view_val"
+                    android:background="@drawable/play"
+                    android:onClick="onPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone"
+                    android:id="@+id/btn_download"
+                    android:layout_below="@+id/txt_view_val"
+                    android:background="@drawable/download"
+                    android:onClick="onDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!--android:visibility="@{vm.dialogVisibility}-->
+        <RelativeLayout
+            android:id="@+id/relative_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fade"
+            android:visibility="@{vm.dialogVisibility}">
+
+            <TextView
+                android:id="@+id/txt_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text=" "/>
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/circular_progressbar"
+                android:secondaryProgress="100" />
+
+            <TextView
+                android:id="@+id/txtProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progress"
+                android:layout_centerInParent="true"
+                android:text="Wait..."
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#e4d279"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

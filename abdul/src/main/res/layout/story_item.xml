@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res/android">
+
+    <data class="StoryBinding">
+        <import type="android.view.View" />
+        <variable
+            name="data"
+            type="zmq.com.ystlibrary.model.StoryListJson.Data" />
+
+        <variable
+            name="handlers"
+            type="zmq.com.ystlibrary.canvas.DownloadResourceActivity.MyClickHandler" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/relative_item_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="@{() -> handlers.onStoryItemClick(data)}"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            bind:imageUrl="@{data}"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_centerInParent="true" />
+        <!--<ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_bookmark"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bookmark_icon_red"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="8dp"
+            android:layout_centerInParent="true" />-->
+
+       <!-- <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />-->
+
+        <TextView
+            android:id="@+id/text_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="#e4d279"
+            android:text="@{data.english_name}"/>
+        <TextView
+            android:id="@+id/text_cardviewHindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_below="@+id/text_cardview"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:text="@{data.story_name}"/>
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar2"
+            android:numStars="5"
+            android:rating="@{data}"
+            android:stepSize="0.5"
+            android:isIndicator="true"
+            android:progressTint="#e4d279"
+            android:layout_marginTop="4dip"
+            android:layout_below="@+id/text_cardviewHindi"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/ratingBarStyleSmall" />
+
+        <TextView
+            android:id="@+id/Story_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar2"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:textSize="13dip"
+            android:textStyle="bold"
+            android:text="@{@string/StoryId+data.story_id}"
+            android:textColor="#4d8ab0"/>
+
+        <TextView
+            android:id="@+id/views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#4d8ab0"
+            android:textSize="12dip"
+            android:text="@{@string/Views+data.view}"/>
+
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/iv_delete_res"
+            android:src="@{data.status ? @drawable/delete_res :@drawable/res_not_avail}"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:onClick="@{() -> handlers.onResourceClick()}"
+            android:layout_toLeftOf="@+id/iv_story_viewed" />
+
+        <ImageView
+            android:id="@+id/iv_story_viewed"
+            android:paddingLeft="5dp"
+            android:visibility="visible"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@{data.status ? @drawable/viewgreen :@drawable/viewed}"
+            android:onClick="@{() -> handlers.onStoryViewClick()}"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</layout>

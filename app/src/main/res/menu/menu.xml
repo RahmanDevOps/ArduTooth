@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_bluetooth"
+        android:icon="@drawable/exit"
+        android:title="setup_bluetooth"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/item_enable"
+                android:title="enable_bluetooth" />
+            <item
+                android:id="@+id/item_disable"
+                android:title="disable_bluetooth"/>
+            <item
+                android:id="@+id/item_scan"
+                android:title="scan_devices"/>
+        </menu>
+    </item>
+</menu>

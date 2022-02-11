@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data class="LanguageBinding">
+        <variable
+            name="language"
+            type="zmq.com.ystlibrary.model.StoryListJson.Language" />
+
+        <variable
+            name="dialogVal"
+            type="zmq.com.ystlibrary.utility.TestDialog" />
+    </data>
+<LinearLayout
+    android:layout_marginLeft="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_language"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@{dialogVal.dialogVisibility ? @drawable/view_rounded_fill_corners :@drawable/view_rounded_corners}"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#e4d279"
+        android:text="@{language.language_code}" />
+</LinearLayout>
+</layout>
+    <!--android:background="@{dialogVal.dialogVisibility ? @drawable/view_rounded_fill_corners :@drawable/view_rounded_corners}"-->
